@@ -13,12 +13,17 @@ OWNER_NAMES = 'emilmont, bogdanm'
 OWNER_EMAILS = 'Emilio.Monti@arm.com, Bogdan.Marinescu@arm.com'
 
 setup(name='mbed-tools',
-      version='0.1.7',
+      version='0.1.12',
       description='Build and test system for mbed',
       long_description=DESCRIPTION,
       author=OWNER_NAMES,
       author_email=OWNER_EMAILS,
       maintainer=OWNER_NAMES,
       maintainer_email=OWNER_EMAILS,
+      packages=['mbed_tools', 'mbed_tools.workspace_tools'],
+      package_dir={
+          'mbed_tools': '',
+          'mbed_tools.workspace_tools': 'workspace_tools'
+      },
       url='https://github.com/mbedmicro/mbed',
       license=LICENSE)
